@@ -1,5 +1,5 @@
 {
-  "name": "action-github-app-token",
+  "name": "action-remote-github-app-token",
   "version": "1.0.0",
   "description": "Gets a GitHub auth token for a GitHub App installation",
   "main": "lib/main.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:getsentry/action-github-app-token.git"
+    "url": "git@github.com:mohammad22/action-github-app-token.git"
   },
   "keywords": [
     "actions",

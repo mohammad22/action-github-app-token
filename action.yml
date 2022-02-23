@@ -1,7 +1,10 @@
-name: 'action-github-app-token'
-description: 'Gets a GitHub auth token for a GitHub App installation'
-author: 'sentry.io'
+name: 'action-remote-github-app-token'
+description: 'Gets a Remote GitHub auth token for an installed on a GitHub App installation installed on a remote Github server'
+author: 'Moe Moghaddam'
 inputs:
+  remoteGithubApiUrl:
+    required: true
+    description: 'The Remote Github API URL, e.g., for Github this is: https://api.github.com'
   app_id:
     required: true
     description: 'GitHub App ID'
@@ -14,7 +17,7 @@ inputs:
     default: ''
 outputs:
   token:
-    description: 'Github Token for App installation'
+    description: 'Remote Github Token for App installation'
 runs:
   using: 'node12'
   main: 'dist/index.js'
