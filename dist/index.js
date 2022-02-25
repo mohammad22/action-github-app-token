@@ -90,6 +90,7 @@
       function run() {
         return __awaiter(this, void 0, void 0, function* () {
           try {
+            const remoteGithubApiUrl = core.getInput('remoteGithubApiUrl');
             const privateKey = core.getInput('private_key');
             const appId = core.getInput('app_id');
             const scope = core.getInput('scope');
@@ -99,7 +100,7 @@
                 appId,
                 privateKey,
               },
-              baseUrl: process.env.GITHUB_API_URL || 'https://api.github.com',
+              baseUrl: remoteGithubApiUrl,
             });
             const installations = yield appOctokit.apps.listInstallations();
             let installationId = installations.data[0].id;
