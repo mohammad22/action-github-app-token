@@ -23,7 +23,7 @@ You will need to provide the GitHub App ID and private key. The action will then
 ```
   - name: my-app-install token
     id: my-app
-    uses: mohammad22/action-github-app-token@v1.0.8
+    uses: mohammad22/action-remote-github-app-token@v1.0.7
     with:
       remoteGithubApiUrl: https://api.github.com
       app_id: ${{ secrets.APP_ID }}
